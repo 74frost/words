@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * Implements hook_entity_presave().
+ */
+ 
+
+function words_entity_presave(Drupal\Core\Entity\EntityInterface $entity) {
+  if ($entity->bundle() == 'article') {
+  
+$result = '1';
+
+ $entity->field_words_counter->value = '$result'; 
+  }
+}
+
+
+?> 
